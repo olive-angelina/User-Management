@@ -1,0 +1,221 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Retained Poppins as the main font */
+}
+
+body {
+    background: linear-gradient(to right, #cedf7f, #a8cc61); /* Light green gradient */
+    color: #666; /* Soft text color */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header and Navbar */
+.header {
+    width: 100%;
+    background-color: #edf2e1; /* Light pastel green background */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: #3b5132; /* Dark green for links */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #28a745; /* Light green for hover */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #edf2e1; /* Light pastel green background */
+}
+
+/* Updated .hero-content to make it visually appealing */
+.hero-content {
+    max-width: 50%; /* Adjust as needed */
+    padding-right: 20px; /* Added padding for spacing */
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #3b5132; /* Dark green title color */
+    text-align: center; /* Center align the heading */
+}
+
+.hero h1 span {
+    color: #5d8b5f; /* Muted green for highlighted text */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #666; /* Soft text color */
+    text-align: center; /* Center align the paragraph */
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 20px;
+}
+
+.button {
+    padding: 15px 30px;
+    background-color: #5d8b5f; /* Muted green button color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #496a47; /* Darker shade of green on hover */
+}
+
+/* Adjust the hero image styles */
+.hero-image {
+    max-width: 50%; /* Keep the image section responsive */
+    display: flex; /* Use flex to center the image */
+    justify-content: center; /* Center align the image */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: block; /* Ensure the image displays properly */
+}
+
+/* Common Container Styles for Dashboard, Login, and Register */
+.container {
+    max-width: 800px; /* Set maximum width for the container */
+    width: 90%; /* Set width to allow more horizontal space */
+    background-color: #edf2e1; /* Light pastel green background */
+    padding: 40px; /* Padding for internal spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the container */
+    text-align: center; /* Center align all text inside the container */
+}
+
+/* Updated Dashboard Container */
+.dashboard-container {
+    max-width: 1200px; /* Expanded maximum width */
+    width: 95%; /* Increased width for more horizontal space */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #edf2e1; /* Light pastel green background */
+    padding: 40px; /* Padding for internal spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the container */
+    text-align: center; /* Center align all text inside the container */
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align all items */
+}
+
+.dashboard-container h1 {
+    margin-bottom: 20px; /* Space between title and paragraph */
+}
+
+.dashboard-container p {
+    margin-bottom: 30px; /* Space between paragraph and buttons */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+    text-align: left; /* Align label and input to the left */
+}
+
+label {
+    display: block; /* Make label block to stack it above the input */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%; /* Make input fields take full width */
+    padding: 10px; /* Padding inside the input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: #edf2e1; /* Light pastel green background */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.footer p {
+    font-size: 1em;
+    color: #666; /* Soft text color */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .hero-image {
+        max-width: 100%; /* Ensure image takes full width on smaller screens */
+        margin-top: 20px; /* Add some space between text and image */
+    }
+
+    .container {
+        padding: 20px; /* Reduce padding for smaller screens */
+        margin: 10px; /* Reduce margin for smaller screens */
+        width: 90%; /* Keep container width responsive */
+    }
+}
