@@ -4,7 +4,7 @@ const path = require('path');
 const User = require('../models/User');
 
 const router = express.Router();
-const JWT_SECRET = 'your_secret_key'; // Replace with an environment variable in production
+const JWT_SECRET = 'your_secret_key'; 
 
 // Route to serve the login page
 router.get('/login', (req, res) => {
@@ -26,7 +26,6 @@ router.post('/register', async (req, res) => {
       return res.status(400).send('User already exists');
     }
 
-    // Create a new user; password will be hashed in the model's pre-save hook
     const user = new User({ username, password });
     await user.save();
 
@@ -46,7 +45,7 @@ router.post('/login', async (req, res) => {
       return res.status(400).send('Invalid credentials');
     }
 
-    // Use the comparePassword method from the User model
+    
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
       return res.status(400).send('Invalid credentials');
